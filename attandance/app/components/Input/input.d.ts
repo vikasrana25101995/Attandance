@@ -1,0 +1,1 @@
+export interface inputfieldprops{ label:any, inputType:any, value:any};
