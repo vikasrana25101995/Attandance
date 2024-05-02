@@ -1,12 +1,11 @@
 'use client'
 import { useState } from "react";
-import { FaEye, FaEyeSlash } from "react-icons/fa";
 import '../Input/input.d.ts'
 import { inputfieldprops } from "../Input/input.d";
 import styles from '../Input/StyleSheet/index.module.scss'
 
 
-const InputField = ({ label, inputType, value} :inputfieldprops) => {
+const InputField = ({ label, inputType, value, eyeIcon, eyeSlashIcon} :inputfieldprops) => {
 
     // Manage the visibility state for password inputs
     const [isPasswordHidden, setIsPasswordHidden] = useState(true);
@@ -21,9 +20,9 @@ const InputField = ({ label, inputType, value} :inputfieldprops) => {
     return (
         <>
 
-        <div  className={`InputLabels ${styles.InputLabels}`}>
+        <div  className={`InputContainer ${styles.InputContainer}`}>
             <label>{label}</label>
-            <div className={`InputWithIcon ${styles.InputWithIcon}`}>
+            <div className={`InputField ${styles.InputField}`}>
                 <input
                     type={currentInputType}
                     value={value}
@@ -32,14 +31,13 @@ const InputField = ({ label, inputType, value} :inputfieldprops) => {
                 />
                 {inputType === 'password' && (
                     <span  onClick={togglePasswordVisibility}>
-                    {isPasswordHidden ? <FaEyeSlash /> : <FaEye />}
+                    {isPasswordHidden ? eyeSlashIcon : eyeIcon }
                     </span>
                 )}
             </div>
             
         </div>
         </>
-        
     )
 };
 
