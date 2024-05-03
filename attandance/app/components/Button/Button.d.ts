@@ -1,0 +1,1 @@
+export interface buttonfieldprops{ text:any, color:any, size:any, width:any};

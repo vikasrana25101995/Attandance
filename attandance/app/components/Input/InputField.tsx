@@ -5,18 +5,16 @@ import { inputfieldprops } from "../Input/input.d";
 import styles from '../Input/StyleSheet/index.module.scss'
 
 
-const InputField = ({ label, inputType, value, eyeIcon, eyeSlashIcon} :inputfieldprops) => {
+const InputField = ({ label, inputType, placeholder, eyeIcon, eyeSlashIcon} :inputfieldprops) => {
 
-    // Manage the visibility state for password inputs
+
     const [isPasswordHidden, setIsPasswordHidden] = useState(true);
 
-    // Toggle visibility of password input
     const togglePasswordVisibility = () => {
         setIsPasswordHidden((prev) => !prev);
     };
-
-     // Determine the input type based on props
-        const currentInputType = inputType === 'password' && isPasswordHidden ? 'password' : 'text';
+    
+    const currentInputType = inputType === 'password' && isPasswordHidden ? 'password' : 'text';
     return (
         <>
 
@@ -25,7 +23,7 @@ const InputField = ({ label, inputType, value, eyeIcon, eyeSlashIcon} :inputfiel
             <div className={`InputField ${styles.InputField}`}>
                 <input
                     type={currentInputType}
-                    value={value}
+                    placeholder={placeholder}
                     // value="admin@dreamstechnologies.com"
 
                 />

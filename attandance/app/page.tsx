@@ -2,7 +2,7 @@ import InputField from "./components/Input/InputField";
 import Image from 'next/image'
 import styles from '../app/components/Input/StyleSheet/index.module.scss';
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import ButtonField from "./components/Button/ButtonField";
+import ButtonField from './components/Button/ButtonField';
 
 export default function Home() {
   return (
@@ -28,8 +28,8 @@ export default function Home() {
                 <InputField
                   label="Username:"
                   inputType="text"
-                  // placeholder="Enter your password"
-                  value='admin@dreamstechnologies.com'
+                  // value='admin@dreamstechnologies.com'
+                  placeholder= 'admin@dreamstechnologies.com'
                   eyeIcon={<FaEye/>}
                   eyeSlashIcon={<FaEyeSlash/>}
                 />
@@ -41,14 +41,14 @@ export default function Home() {
                 <InputField
                   label="Password:"
                   inputType="password"
-                  // placeholder="123456"
-                  value='123456'
+                  placeholder="123456"
+                  // value='123456'
                   eyeIcon={<FaEye/>}
                   eyeSlashIcon={<FaEyeSlash/>}
                 />
               
             </div>
-            <ButtonField />
+            <ButtonField text={undefined} color={undefined} size={undefined} width={undefined} />
           </div>
         </div>
       </div>
