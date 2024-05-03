@@ -25,7 +25,6 @@ const InputField = ({ label, inputType, placeholder, eyeIcon, eyeSlashIcon} :inp
                     type={currentInputType}
                     placeholder={placeholder}
                     // value="admin@dreamstechnologies.com"
-
                 />
                 {inputType === 'password' && (
                     <span  onClick={togglePasswordVisibility}>
@@ -33,7 +32,6 @@ const InputField = ({ label, inputType, placeholder, eyeIcon, eyeSlashIcon} :inp
                     </span>
                 )}
             </div>
-            
         </div>
         </>
     )
