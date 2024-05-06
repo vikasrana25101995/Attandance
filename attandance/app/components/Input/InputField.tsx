@@ -24,6 +24,7 @@ const InputField = ({ label, inputType, placeholder, eyeIcon, eyeSlashIcon} :inp
                 <input
                     type={currentInputType}
                     placeholder={placeholder}
+                
                     // value="admin@dreamstechnologies.com"
                 />
                 {inputType === 'password' && (
