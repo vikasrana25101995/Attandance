@@ -1,95 +1,58 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+import InputField from "./components/Input/InputField";
+import Image from 'next/image'
+import styles from '../app/components/Input/StyleSheet/index.module.scss';
+import { FaEye, FaEyeSlash } from "react-icons/fa";
+import ButtonField from './components/Button/ButtonField';
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <>
+      <div className={styles.LoginApplyJob}>
+          <a href="#"> Apply Job</a>
+      </div>
+      <div className='Main-Login'>
+        
+        <div className="LoginFrom">
+          <Image
+            src="/smarthr-dreamstechnologies.png"
+            width={100}
+            height={100}
+            alt="Picture of the author"
+          />
+          <div className="">
+            <h3>Login</h3>
+            <p>Access to our dashboard</p>
+
+            <div>
+              
+                <InputField
+                  label="Username:"
+                  inputType="text"
+                  // value='admin@dreamstechnologies.com'
+                  placeholder= 'admin@dreamstechnologies.com'
+                  eyeIcon={<FaEye/>}
+                  eyeSlashIcon={<FaEyeSlash/>}
+                />
+              
+            </div>
+
+            <div>
+              
+                <InputField
+                  label="Password:"
+                  inputType="password"
+                  placeholder="123456"
+                  // value='123456'
+                  eyeIcon={<FaEye/>}
+                  eyeSlashIcon={<FaEyeSlash/>}
+                />
+              
+            </div>
+            <ButtonField text={undefined} color={undefined} size={undefined} width={undefined} />
+          </div>
         </div>
       </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   );
 }
+

@@ -1,0 +1,28 @@
+.CustomButton{
+    // background: linear-gradient(to right, #FF902F 0%, #FC6075 100%);
+    background: blue;
+    border-radius: 50px;
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    margin-top: 20px;
+
+    padding: 10px;
+    font-size: 14px;
+
+    &.large {
+        font-size: 22px;
+        padding: 4px 8px;
+    }
+    
+    &.medium {
+        font-size: 18px;
+        padding: 4px 8px;
+    }
+    
+    &.small {
+        font-size: 10px;
+        padding: 4px 8px;
+    }
+}
+
