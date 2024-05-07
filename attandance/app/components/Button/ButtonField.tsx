@@ -20,7 +20,7 @@ const ButtonField = ({ text, color, size, width} : buttonfieldprops) => {
 
     return (
         <div className={`ButtonContainer ${styles.ButtonContainer}`}>
-            <button style={buttonStyle} className={`CustomButton ${styles.CustomButton} ${sizeClass}`}>{text || 'Login'}</button>
+            <button type='submit' style={buttonStyle} className={`CustomButton ${styles.CustomButton} ${sizeClass}`}>{text || 'Login'}</button>
         </div>
     )
 }

@@ -1,1 +1,1 @@
-export interface inputfieldprops{ label:any, inputType:any, placeholder:any, eyeIcon:any, eyeSlashIcon:any};
+export interface inputfieldprops{ label:any, inputType:any, placeholder:any, eyeIcon:any, eyeSlashIcon:any, values:any, onChange:any, onBlur:any, name:any};
