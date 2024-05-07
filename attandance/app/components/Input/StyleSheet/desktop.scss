@@ -6,6 +6,7 @@
 }
 .InputField{
     margin-top: 5px;
+    position: relative;
 }
 .InputField>input{
     background-color: #f9f9f9;
@@ -21,9 +22,9 @@
 }
 
 .InputField>span>svg{
-    position: relative;
-    top: 4px;
-    left: -35px;
+    position: absolute;
+    top: 24px;
+    left: 390px;
     font-size: 20px;
     color: #4D5154;
 }
