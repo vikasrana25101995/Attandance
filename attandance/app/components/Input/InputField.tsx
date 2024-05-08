@@ -3,9 +3,10 @@ import { useState } from "react";
 import '../Input/input.d.ts'
 import { inputfieldprops } from "../Input/input.d";
 import styles from '../Input/StyleSheet/index.module.scss'
+import { ErrorMessage, Field, Form, Formik, FormikHelpers, FormikValues } from "formik";
 
 
-const InputField = ({ label, inputType, placeholder, eyeIcon, eyeSlashIcon, name, values, onChange, onBlur} :inputfieldprops) => {
+const InputField = ({ label, inputType, eyeIcon, eyeSlashIcon, values, ...props} :inputfieldprops) => {
 
 
     const [isPasswordHidden, setIsPasswordHidden] = useState(true);
@@ -17,20 +18,19 @@ const InputField = ({ label, inputType, placeholder, eyeIcon, eyeSlashIcon, name
     const currentInputType = inputType === 'password' && isPasswordHidden ? 'password' : 'text';
     return (
         <>
-
+    
         <div  className={`InputContainer ${styles.InputContainer}`}>
             <label>{label}</label>
+           
             <div className={`InputField ${styles.InputField}`}>
-                <input
+                <div>
+                <Field
                     type={currentInputType}
-                    placeholder={placeholder}
-                    name={name}
                     value={values}
-                    onChange={onChange}
-                    onBlur={onBlur}
-                    
-                    // value="admin@dreamstechnologies.com"
+                    {...props}
                 />
+                <ErrorMessage  name={props.name} ></ErrorMessage>
+                </div>
                 {inputType === 'password' && (
                     <span  onClick={togglePasswordVisibility}>
                     {isPasswordHidden ? eyeSlashIcon : eyeIcon }
@@ -38,6 +38,7 @@ const InputField = ({ label, inputType, placeholder, eyeIcon, eyeSlashIcon, name
                 )}
             </div>
         </div>
+
         </>
     )
 };

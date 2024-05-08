@@ -1,4 +1,4 @@
-.InputContainer>label{
+.InputContainer label{
     color: #212529;
     font-size: 16px;
     font-weight: normal;
@@ -8,7 +8,13 @@
     margin-top: 5px;
     position: relative;
 }
-.InputField>input{
+.InputField div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 8px 0;
+}
+.InputField input{
     background-color: #f9f9f9;
     border: 1px solid #E2E4E6;
     height: 46px;

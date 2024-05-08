@@ -1,9 +1,8 @@
-import From from "@/app/components/Form/form";
-
+import Form from "@/app/components/Form/form";
 
 export default {
-    title: '/Components/From', 
-    component: From, 
+    title: '/Components/Form', 
+    component: Form, 
 };
 
-export const Default = () => <From />;
+export const Default = () => <Form />;
