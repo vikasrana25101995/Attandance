@@ -1,7 +1,7 @@
 import ButtonField from "../Button/ButtonField";
 import InputField from "../Input/InputField";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
-import { ErrorMessage, Formik, useFormik } from "formik";
+import { Formik } from "formik";
 import { LoginSchema } from "../Schemas/page";
 
 const initialValues = {
