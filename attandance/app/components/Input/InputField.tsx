@@ -21,7 +21,6 @@ const InputField = ({ label, inputType, eyeIcon, eyeSlashIcon, values, ...props}
     
         <div  className={`InputContainer ${styles.InputContainer}`}>
             <label>{label}</label>
-           
             <div className={`InputField ${styles.InputField}`}>
                 <div>
                 <Field
